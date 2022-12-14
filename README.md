@@ -68,6 +68,7 @@ npm install prettier
 4. Node.js 
 5. express
 6. React
+7. MongoDB
 
 ## Improvement from v1.0 based on Usability Study Report
 1. Cannot find where to register immedietly (Priority: must change) --> Added an icon at registration
@@ -83,18 +84,34 @@ npm install prettier
 
 ## Job Application Tracker v1.0 looks like:
 1. Sign Up and Log In - Before
+
 ![](./front/document/edit.png)
+
 2. User Management - Before
+
 ![](./front/document/user.png)
+
 3. View Application Record - Before
+
 ![](./front/document/list.png)
+
 4. Edit Application - Before
+
 ![](./front/document/edit.png)
+
 
 ## Job Application Tracker v2.0 looks like:
 1. Log In - After
+
 ![](./front/document/login_after.png)
+
 2. User Management - After
+
 ![](./front/document/account_after.png)
+
 3. View Application Record - After
+
 ![](./front/document/mainpage_after.png)
+
+4. Edit Application - After
+![](./front/document/edit_after.png)
