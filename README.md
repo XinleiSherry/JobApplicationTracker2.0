@@ -13,7 +13,7 @@ This repo is a web application that provide a job application tracker for users 
 [Code](https://github.com/XinleiSherry/JobApplicationTracker2.0)
 
 **Demo Link**
-[Youtube](https://youtu.be/YGS9fBCfKOg)
+[Youtube](https://youtu.be/_T0SwNO2Ab4)
 
 **Usability Study Report Link**
 [Usability Study Report](https://docs.google.com/document/d/1q3gRzHdEa--rQTl767PvK3L6BnBWbZvG8k5xpiN5n2Y/edit?usp=sharing)
@@ -35,8 +35,9 @@ Users can create account, record all job application information, and search for
 ## Installation
 1. Clone the repository
 2. Open it in your favourite editor
-3. Run yarn install/ npm install to install node modules
-4. Install required dependencies and open website on heroku
+3. Run npm install，npm start
+4. Install required dependencies
+5. Open website on server by using link above or replace address in package.json with http://localhost:3000
 
 ## Build Dependencies and Instructions
 npm init -y
@@ -81,7 +82,7 @@ npm install prettier
 6. Application List --> Application record cards
 
 ## Color Pallet
-![](./front/document/colorPallet.png)
+![](./front/document/colorPallet2.png)
 
 ## Job Application Tracker v1.0 looks like:
 1. Sign Up and Log In - Before
