@@ -7,6 +7,7 @@ This repo is a web application that provide a job application tracker for users 
 
 **Website Link**
 [Website](http://wake.kele.plus)
+[Deployed Website](http://43.139.124.186:5005)
 
 **Github Link**
 [Code](https://github.com/XinleiSherry/JobApplicationTracker2.0)
