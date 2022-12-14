@@ -35,7 +35,7 @@ Users can create account, record all job application information, and search for
 1. Clone the repository
 2. Open it in your favourite editor
 3. Run yarn install/ npm install to install node modules
-4. install required dependencies and open website on heroku
+4. Install required dependencies and open website on heroku
 
 ## Build Dependencies and Instructions
 npm init -y
