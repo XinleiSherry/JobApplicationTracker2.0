@@ -48,21 +48,21 @@ Users can create account, record all job application information, and search for
 
 
 ## Features
-1. Users: 
+1. Users:   
 a. users can create their own profiles, including username, contact information, and password. 
-b. users can view and edit their profiles.
-c. users can log out. 
-d. Users can delete their accounts if not needed.
+b. users can view and edit their profiles.  
+c. users can log out.   
+d. Users can delete their accounts if not needed.  
 
-2. Application Record View: 
-a. application cards created will be colored by status. 
-b. users can search a specific application record by entering the company name in the search bar at the top of the page.
-c. users can jump to the previous page/next page/a specific page by using page navigation at the bottom of the page.
+2. Application Record View:   
+a. application cards created will be colored by status.   
+b. users can search a specific application record by entering the company name in the search bar at the top of the page.  
+c. users can jump to the previous page/next page/a specific page by using page navigation at the bottom of the page.  
 
-3. Applications: 
-a. users can create a new application record with information including company name, position, status, and date.
-b. there are “edit” button to revise all the above information, and "delete" button to remove a specific record.
-c. users have four options to assign status, which are “Applied”, “OA”, “VO”, and “Results”.
+3. Applications:   
+a. users can create a new application record with information including company name, position, status and date.  
+b. there are “edit” button to revise all the above information, and "delete" button to remove a specific record.  
+c. users have four options to assign status, which are “Applied”, “OA”, “VO”, and “Results”.  
 
 ## Tech Requirements
 1. HTML5
