@@ -1,5 +1,8 @@
 # JobApplicationTracker2.0
-This repo is a web application that provide a job application tracker for users to record all needed information about their applications.
+This repo is a web application that provide a job application tracker for job seekers to record all needed information about their job applications. 
+This project was improved from JobApplicationTrackerv1.0 based on Usability Study Report and implemented some design principles.
+This whole project can be used only with keyboard.
+This project contains an eslint config file and was formatted using Prettier.
 
 **Author:**
  Xinlei Hu
@@ -35,9 +38,13 @@ Users can create account, record all job application information, and search for
 ## Installation
 1. Clone the repository
 2. Open it in your favourite editor
-3. Run npm install，npm start
-4. Install required dependencies
-5. Open website on server by using link above or replace address in package.json with http://localhost:3000
+3. Start the mongo local server
+4. cd JobApplicationTracker
+5. yarn
+6. yarn build
+7. yarn start
+8. Open http://127.0.0.1:5005 with your brower
+9. Clear brower cache
 
 ## Build Dependencies and Instructions
 npm init -y
@@ -60,7 +67,7 @@ npm install prettier
 
 ## Features
 1. Users: users can create their own profile, including user name, contact information, and password. Users can view and edit their profiles as well. The user account created can also be deleted if not needed.
-2. Application List View: users can search a specific application record by entering the company name in the search box at the top of the page. Also, users can jump to the previous or next page by using buttons at the bottom of the page.
+2. Application Record View: users can search a specific application record by entering the company name in the search box at the top of the page. Also, users can jump to the previous or next page by using buttons at the bottom of the page.
 3. Application List: here user can create a new application record with information including company name, position, status, date, and so on. There will be a button named “edit” to revise all the above information as well as delete that specific record. As for status, users have four options, which are “Applied”, “OA”, “VO”, and “Results”.
 
 ## Tech Requirements
@@ -80,6 +87,9 @@ npm install prettier
 --> Big “+” plus sign for “create” function
 5. Not sure what to enter to search for a specific record --> Eye-catching search bar
 6. Application List --> Application record cards
+
+## LightHouse Accessbility
+![](./front/document/lighthouse.png)
 
 ## Color Pallet
 ![](./front/document/colorPallet2.png)
