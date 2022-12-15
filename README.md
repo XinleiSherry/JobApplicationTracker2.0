@@ -74,17 +74,17 @@ c. users have four options to assign status, which are “Applied”, “OA”, 
 7. MongoDB
 
 ## Improvement from v1.0 based on Usability Study Report
-1. Cannot find where to register immedietly (Priority: must change) 
+1. Cannot find where to register immedietly (Priority: must change)    
     --> Added an icon at registration
-2. Not sure who are target users (Priority: must change) 
+2. Not sure who are target users (Priority: must change)    
     --> Added a description under the website title
-3. Black and grey color looks dull 
+3. Black and grey color looks dull    
     --> New colors makes user more comfortable with the website
-4. Cannot find where to create new record (Priority: must change)
+4. Cannot find where to create new record (Priority: must change)   
     --> Big “+” plus sign for “create” function
-5. Not sure what to enter to search for a specific record 
+5. Not sure what to enter to search for a specific record    
     --> Eye-catching search bar
-6. Application List 
+6. Application List    
     --> Application record cards
 
 ## Lighthouse Accessbility
