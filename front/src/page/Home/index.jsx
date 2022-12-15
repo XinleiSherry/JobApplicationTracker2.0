@@ -2,14 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Page from '../../components/Page'
 import './home.css'
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
     Input,
-    TableContainer,
     Box,
     InputGroup,
     InputRightAddon,
@@ -31,9 +24,8 @@ import {
     AlertDescription,
     IconButton
 } from '@chakra-ui/react'
-import { DeleteIcon, EditIcon, Search2Icon,AddIcon } from '@chakra-ui/icons'
+import { DeleteIcon, EditIcon, Search2Icon, AddIcon } from '@chakra-ui/icons'
 import { useSelector } from 'react-redux'
-import ReactPaginate from 'react-paginate';
 function Home() {
     let [serchContent, setSerchContent] = useState('')
     let [delID, setDelID] = useState('');
@@ -124,13 +116,6 @@ function Home() {
                 }} />
             </InputGroup>
         </Box>
-        {/* <Box m='30px 170px' display={'flex'} justifyContent='flex-end'>
-            <Button onClick={() => {
-                setCurState('save');
-                setFormTitle('Create New Appliction');
-                onOpen()
-            }}>+ new</Button>
-        </Box> */}
         <AlertDialog
             motionPreset='slideInBottom'
             leastDestructiveRef={cancelRef}
@@ -152,13 +137,6 @@ function Home() {
             isCentered
         >
             <AlertDialogOverlay />
-
-
-
-
-
-
-
             <AlertDialogContent>
                 <AlertDialogHeader>{formTitle}</AlertDialogHeader>
                 <AlertDialogCloseButton />
@@ -256,8 +234,6 @@ function Home() {
                             })
                             return;
                         }
-                        console.log(userInfo);
-
                         let data = {
                             company,
                             position,
@@ -267,8 +243,6 @@ function Home() {
                             id: curState
                         };
                         let xhr = new XMLHttpRequest();
-                        // setCurState('add');
-
                         xhr.open(`${curState === 'save' ? 'POST' : 'PUT'}`, `${curState === 'save' ? '/applyfor/add' : '/applyfor/update'}`);
                         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
                         const usp = new URLSearchParams(data)
@@ -335,7 +309,6 @@ function Home() {
                     </Button>
                     <Button colorScheme='red' ml={3} onClick={() => {
                         let xhr = new XMLHttpRequest();
-                        // setCurState('add');
                         xhr.open('delete', `/applyfor/delete?id=${delID}`);
                         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
                         xhr.send()
@@ -356,72 +329,20 @@ function Home() {
 
 
         <Box m='0px 170px' >
-            {/* <TableContainer>
-                <Table variant='simple'>
-                    <Thead>
-                        <Tr>
-                            <Th>Company</Th>
-                            <Th>Position</Th>
-                            <Th >Status</Th>
-                            <Th >Date</Th>
-                            <Th >Operation</Th>
-                        </Tr>
-                    </Thead>
-                    <Tbody>
-                        {tableData.map(item => <Tr key={item.id}>
-                            <Td>{item.company}</Td>
-                            <Td>{item.position}</Td>
-                            <Td>{returnState(item.status)}</Td>
-                            <Td>{item.date}</Td>
-                            <Td>
-                                <Stack direction='row' spacing={4}>
-                                    <IconButton
-                                        onClick={() => {
-                                            let { company, position, status, date, id } = item;
-                                            setCurState(id);
-                                            onOpen();
-                                            setFormState({
-                                                company: company,
-                                                position: position,
-                                                status: status,
-                                                date: date,
-                                            });
-                                        }}
-                                        colorScheme='teal'
-                                        icon={<EditIcon />}
-                                    />
-                                    <IconButton
-                                        onClick={() => {
-                                            let {  id } = item;
-                                            setDelID(id);
-                                            onOpen1();
-                                        }}
-                                        colorScheme='red'
-                                        icon={<DeleteIcon />}
-                                    />
-                                </Stack>
-                            </Td>
-                        </Tr>)}
-                    </Tbody>
-                </Table>
-            </TableContainer> */}
-
             <Box display='flex' justifyContent='flex-start' flexWrap={'wrap'} >
                 {tableData.map(item => {
-                    console.log(item);
-
                     return <Box position={'relative'} width={'250px'} height="250px" boxSizing="border-box" boxShadow={'2px 2px 3px 1px rgb(0 0 0 / 20%) !important'} padding="20px" margin={'20px'} backgroundColor={colorAry[item.status - 1]} borderRadius={'30px'}>
                         <Box lineHeight={'36px'}>
-                            Company：<span display={'inline-block'}>{item.company}</span> 
+                            Company：<span display={'inline-block'}>{item.company}</span>
                         </Box>
                         <Box lineHeight={'36px'}>
                             Position： <span textOverflow={'clip'} display={'inline-block'}>{item.position}</span>
                         </Box>
                         <Box lineHeight={'36px'} >
-                            Status： <span  >{returnState(item.status)}</span> 
+                            Status： <span  >{returnState(item.status)}</span>
                         </Box>
                         <Box lineHeight={'36px'}>
-                            Date：  <span  >{item.date}</span> 
+                            Date：  <span  >{item.date}</span>
                         </Box>
 
                         <Box position={'absolute'} right="20px" bottom={'14px'}>
@@ -455,83 +376,22 @@ function Home() {
                                 />
                             </Stack>}
                         </Box>
-
-
                     </Box>
-
-                    return <Tr key={item.id}>
-                        <Td>{item.company}</Td>
-                        <Td>{item.position}</Td>
-                        <Td>{returnState(item.status)}</Td>
-                        <Td>{item.date}</Td>
-                        <Td>
-                            <Stack direction='row' spacing={4}>
-                                <IconButton
-                                    onClick={() => {
-                                        let { company, position, status, date, id } = item;
-                                        setCurState(id);
-                                        onOpen();
-                                        setFormState({
-                                            company: company,
-                                            position: position,
-                                            status: status,
-                                            date: date,
-                                        });
-                                    }}
-                                    colorScheme='teal'
-                                    icon={<EditIcon />}
-                                />
-                                <IconButton
-                                    onClick={() => {
-                                        let { id } = item;
-                                        setDelID(id);
-                                        onOpen1();
-                                    }}
-                                    colorScheme='red'
-                                    icon={<DeleteIcon />}
-                                />
-                            </Stack>
-                        </Td>
-                    </Tr>
-
                 })}
 
 
                 <Box onClick={() => {
-                            setCurState('save');
-                            setFormTitle('Create New Appliction');
-                            onOpen()
-                        }} width={'250px'} cursor="pointer" display="flex" justifyContent={'center'} alignItems="center" height="250px" boxSizing="border-box" boxShadow={'2px 2px 3px 1px rgb(0 0 0 / 20%) !important'} padding="20px" margin={'20px'} backgroundColor={'#f9f0f0'} borderRadius={'30px'}>
-
-                    {/* <Box m='30px 170px' display={'flex'} justifyContent='center'> */}
-
-                    <AddIcon w={20} h={20} color="#787878"/>
-                        {/* <Button onClick={() => {
-                            setCurState('save');
-                            setFormTitle('Create New Appliction');
-                            onOpen()
-                        }}>+ new</Button> */}
-                    {/* </Box> */}
-
-
+                    setCurState('save');
+                    setFormTitle('Create New Appliction');
+                    onOpen()
+                }} width={'250px'} cursor="pointer" display="flex" justifyContent={'center'} alignItems="center" height="250px" boxSizing="border-box" boxShadow={'2px 2px 3px 1px rgb(0 0 0 / 20%) !important'} padding="20px" margin={'20px'} backgroundColor={'#f9f0f0'} borderRadius={'30px'}>
+                    <AddIcon w={20} h={20} color="#787878" />
                 </Box>
 
             </Box>
-
-
-            <Box position={'fixed'} bottom="20px" right={'90px'}> 
-            <Page totalPage={Math.ceil(pageCount)}  pageCallbackFn={handlePageClick} />
-
+            <Box position={'fixed'} bottom="20px" right={'90px'}>
+                <Page totalPage={Math.ceil(pageCount)} pageCallbackFn={handlePageClick} />
             </Box>
-            {/* <ReactPaginate
-                breakLabel="..."
-                nextLabel="next >"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={10}
-                pageCount={pageCount}
-                previousLabel="< previous"
-                renderOnZeroPageCount={null}
-            /> */}
         </Box>
 
     </div>

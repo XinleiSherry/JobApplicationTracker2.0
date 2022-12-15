@@ -20,7 +20,6 @@ applyfor.post("/add", async (req, res) => {
 });
 // query list
 applyfor.post("/list", async (req, res) => {
-  console.log(req);
   if (!req.body.userid) {
     res.send({ msg: "userid is null", status: 1 });
     return;

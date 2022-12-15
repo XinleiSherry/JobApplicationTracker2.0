@@ -10,7 +10,7 @@ import {
     AlertDescription,
     Box,
 } from '@chakra-ui/react';
-import { ArrowForwardIcon} from '@chakra-ui/icons'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { Link, useNavigate } from 'react-router-dom';
 import md5 from 'md5';
 
@@ -153,9 +153,9 @@ function Login() {
             })
             // reset();
         }}>Registration</Button>
-        <Link to='/' style={{fontWeight:"bold"}}>
+        <Link to='/' style={{ fontWeight: "bold" }}>
             <ArrowForwardIcon w={7} h={7} color="#6ea2dc" />
-                Return to Login !
+            Return to Login !
         </Link>
     </Stack>
 }

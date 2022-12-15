@@ -11,10 +11,10 @@ import {
     InputRightElement
 } from '@chakra-ui/react';
 
-import { LinkIcon} from '@chakra-ui/icons'
+import { LinkIcon } from '@chakra-ui/icons'
 import { Link, useNavigate } from 'react-router-dom';
 import md5 from 'md5';
-import {addUserInfo}  from '../../store/features/user/userSlice'
+import { addUserInfo } from '../../store/features/user/userSlice'
 import { useDispatch } from 'react-redux';
 
 
@@ -38,7 +38,7 @@ function Login() {
     }
     return <Stack transform="scale(1.1)" spacing={6} w="30%" margin='0 auto' boxShadow={'4px 4px 10px 1px rgb(0 0 0 / 20%)'} borderRadius="30px" style={{ marginTop: '120px' }} padding="30px" backgroundColor='#FFF'>
         <FormControl isInvalid={userNameError} >
-            
+
             <Box textAlign='center' marginBottom="20px" fontWeight='bold' fontSize='2xl'>
                 Login
             </Box>
@@ -108,7 +108,7 @@ function Login() {
             const query = usp.toString()
             xhr.send(query)
             xhr.addEventListener('load', function () {
-                let { status, msg,userInfo } = JSON.parse(this.response);
+                let { status, msg, userInfo } = JSON.parse(this.response);
                 if (+status === 0) {
                     // success
                     setAlart({
@@ -135,9 +135,9 @@ function Login() {
         }}>Login</Button>
 
         <Box>
-            <Link to='/registered' style={{fontWeight:"bold"}}><LinkIcon w={7} height={7} color="#6ea2dc"/>  Don't you have an account yet? Go ahead and sign up for one !</Link>
+            <Link to='/registered' style={{ fontWeight: "bold" }}><LinkIcon w={7} height={7} color="#6ea2dc" />  Don't you have an account yet? Go ahead and sign up for one !</Link>
         </Box>
-       
+
     </Stack>
 }
 
