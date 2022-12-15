@@ -35,40 +35,34 @@ Job Application Tracker
 This is a web application that provides users with a platform to track their job application status.
 Users can create account, record all job application information, and search for specific record.
  
-## Installation
-1. Clone the repository: git@github.com:XinleiSherry/JobApplicationTracker2.0.git
-2. Open it in your favourite editor
-3. Start the mongo local server
+## Instruction
+1. Start the mongo local server
+2. Clone the repository: https://github.com/XinleiSherry/JobApplicationTracker2.0.git
+3. Open it in your favourite editor
 4. cd JobApplicationTracker
 5. yarn
 6. yarn build
 7. yarn start
-8. Open http://127.0.0.1:5005 with your brower
-9. Clear brower cache
+8. Enter http://127.0.0.1:5005/ in the address bar of your browser
+9. Better to clear browser cache
 
-## Build Dependencies and Instructions
-npm init -y
-
-npm i express
-
-npm i --save--dev nodemon
-
-npm start
-
-npm build
-
-npm i bcrypt
-
-npm install mongodb
-
-npm install eslint
-
-npm install prettier
 
 ## Features
-1. Users: users can create their own profile, including username, contact information, and password. Users can view and edit their profiles as well. The user account created can also be deleted if not needed.
-2. Application Record View: users can search a specific application record by entering the company name in the search box at the top of the page. Also, users can jump to the previous or next page by using buttons at the bottom of the page.
-3. Application List: here user can create a new application record with information including company name, position, status, date, and so on. There will be a button named “edit” to revise all the above information as well as delete that specific record. As for status, users have four options, which are “Applied”, “OA”, “VO”, and “Results”.
+1. Users: 
+a. users can create their own profiles, including username, contact information, and password. 
+b. users can view and edit their profiles.
+c. users can log out. 
+d. Users can delete their accounts if not needed.
+
+2. Application Record View: 
+a. application cards created will be colored by status. 
+b. users can search a specific application record by entering the company name in the search bar at the top of the page.
+c. users can jump to the previous page/next page/a specific page by using page navigation at the bottom of the page.
+
+3. Applications: 
+a. users can create a new application record with information including company name, position, status, and date.
+b. there are “edit” button to revise all the above information, and "delete" button to remove a specific record.
+c. users have four options to assign status, which are “Applied”, “OA”, “VO”, and “Results”.
 
 ## Tech Requirements
 1. HTML5
@@ -80,13 +74,18 @@ npm install prettier
 7. MongoDB
 
 ## Improvement from v1.0 based on Usability Study Report
-1. Cannot find where to register immedietly (Priority: must change) --> Added an icon at registration
-2. Not sure who are target users (Priority: must change) --> Added a description under the website title
-3. Black and grey color looks dull --> New colors makes user more comfortable with the website
+1. Cannot find where to register immedietly (Priority: must change) 
+    --> Added an icon at registration
+2. Not sure who are target users (Priority: must change) 
+    --> Added a description under the website title
+3. Black and grey color looks dull 
+    --> New colors makes user more comfortable with the website
 4. Cannot find where to create new record (Priority: must change)
---> Big “+” plus sign for “create” function
-5. Not sure what to enter to search for a specific record --> Eye-catching search bar
-6. Application List --> Application record cards
+    --> Big “+” plus sign for “create” function
+5. Not sure what to enter to search for a specific record 
+    --> Eye-catching search bar
+6. Application List 
+    --> Application record cards
 
 ## Lighthouse Accessbility
 ![](./front/document/lighthouse.png)
