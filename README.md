@@ -49,7 +49,7 @@ Users can create account, record all job application information, and search for
 
 ## Features
 1. Users:   
-a. users can create their own profiles, including username, contact information, and password. 
+a. users can create their own profiles, including username, contact information, and password.   
 b. users can view and edit their profiles.  
 c. users can log out.   
 d. Users can delete their accounts if not needed.  
